@@ -1,7 +1,8 @@
+
 <html>
 <head>
-<link rel="icon" type="image/png" href="logo.PNG">
-<title>Contact</title>
+<title>My Identity Dashboard</title>
+ <link rel="icon" type="image/png" href="logo.PNG">
 
 <style>
   *{
@@ -11,79 +12,138 @@
     font-family: Arial, sans-serif;
   }
 
+  :root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+  }
+
   body{
-    background:#151718;
+    background:var(--light);
+    color:var(--dark);
+    min-height:100vh;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+  }
+
+  /* NAVBAR */
+  nav{
+    background:blue;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
-    height:100vh;
   }
 
-  .contact-box{
-    background:#2563eb;
-    color:white;
-    padding:40px;
-    border-radius:12px;
+  nav h2{
+    color:rgb(253, 248, 248);
+    font-size:22px;
+  }
+
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+  }
+  body{
+    background: rgb(65, 109, 82);
+  }
+
+  nav ul li a{
+    color:rgb(249, 242, 242);
+    text-decoration:none;
+    font-weight:bold;
+    font-size:15px;
+  }
+
+  nav ul li a:hover{
+    opacity:0.8;
+  }
+
+  /* BODY */
+  .content{
+    flex:1;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    width:90%;
-    max-width:500px;
-    transition:0.3s;
+    padding:60px 20px;
   }
 
-  /* hover effect */
-  .contact-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 30px rgba(0,0,0,0.25);
-  }
-
-  .contact-box img{
-    width:110px;
-    height:110px;
+  /* PROFILE */
+  .profile img{
+    width:140px;
+    height:140px;
     border-radius:50%;
-    object-fit:cover;
-    border:3px solid white;
+    border:3px solid var(--primary);
     margin-bottom:15px;
   }
 
-  .contact-box h1{
-    margin-bottom:20px;
+  .content h1{
+    margin-bottom:10px;
+    color:var(--dark);
   }
 
-  .contact-box p{
-    margin:10px 0;
+  .content p{
+    color:#555;
     font-size:16px;
-    opacity:0.95;
+    line-height:1.8;
+    max-width:600px;
+    margin:0 auto;
   }
 
-  /* links */
-  .contact-box a{
+  /* FOOTER */
+  footer{
+    background:var(--dark);
     color:white;
-    text-decoration:none;
-    font-weight:bold;
+    text-align:center;
+    padding:25px 15px;
   }
 
-  .contact-box a:hover{
-    text-decoration:underline;
+  footer p{
+    margin:5px 0;
+    font-size:14px;
   }
+ 
+
 </style>
 </head>
 
 <body>
 
-<div class="contact-box">
+<!-- NAVBAR -->
+<nav>
+  <h2>My Identity</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <img src="dodieu.JPG" alt="profile">
+<!-- BODY -->
+<div class="content">
 
-  <h1>Contact Me</h1>
+  <!-- PROFILE -->
+  <div class="profile">
+    <img src="dodieu.JPG" alt="profile">
+  </div>
 
-  <p>Email: <a href="mailto:niyitangajeandedieu@gmail.com">niyitangajeandedieu@gmail.com</a></p>
-  <p>Phone: <a href="tel:+250793591625">+250 793591625</a></p>
-  <p>Address: Mwendo, Kigali, Rwanda</p>
-  <p>WhatsApp: <a href="https://wa.me/250793591625" target="_blank">Chat on WhatsApp</a></p>
-  <p>Instagram: <a href="https://instagram.com/dodie_u109" target="_blank">dodie_u109</a></p>
+  <h1>NIYITANGA JEAN DE DIEU</h1>
+
+  <!-- <p>
+    My name is Jean de Dieu Niyitanga.<br>
+    I am a student in L4 Software Development<br>
+    at G.S MWENDO TSS.
+  </p> -->
 
 </div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Niyitanga Jean de Dieu</p>
+
+  <p>Email: niyitangajeandedieu@gmail.com</p>
+  <p>Phone: +250 793591625</p>
+  <p>Address: mwendo, Kigali, Rwanda</p>
+</footer>
 
 </body>
 </html>
